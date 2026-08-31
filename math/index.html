@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8th Grade Math — Khan Academy Style</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="dark"] {
+      --ka-green: #14bf96;
+      --ka-dark: #21242c;
+      --ka-blue: #1865f2;
+      --ka-bg: #f7f8fa;
+      --ka-card: #ffffff;
+      --ka-border: #e3e5e8;
+      --ka-text: #21242c;
+      --ka-muted: #5f6368;
+      --bg:#f7f8fa; --card:#fff; --text:#21242c; --text2:#5f6368;
+      --blue:#1865f2; --green:#14bf96; --border:#e3e5e8;
+    }
+    [data-theme="light"] {
+      --bg:#f0f4ff; --card:#fff; --text:#1e293b; --text2:#64748b;
+      --blue:#2563eb; --green:#14bf96; --border:#c7d2fe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+    }
+    header {
+      background: var(--green);
+      color: white;
+      padding: 28px 20px 20px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: 0.3px; }
+    header p { margin: 0; opacity: 0.95; font-size: 16px; }
+    .subtitle { font-size: 13px; opacity: 0.9; margin-top: 8px; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px 16px 60px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform .08s ease, box-shadow .15s ease;
+    }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .ch-num {
+      width: 44px; height: 44px; border-radius: 10px;
+      background: var(--ka-green); color: white;
+      display: grid; place-items: center; font-weight: 800; font-size: 16px;
+      flex-shrink: 0;
+    }
+    .ch-meta { flex: 1; }
+    .ch-title { font-weight: 700; font-size: 16px; margin: 0 0 4px; }
+    .ch-cn { font-size: 13px; color: var(--ka-muted); margin: 0 0 6px; }
+    .ch-videos { font-size: 12px; color: var(--ka-muted); margin: 0; }
+    .badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #eafaf6; color: #0a7b5d; margin-top: 8px; }
+    .badge.ka { background: #e8f0fe; color: #1557b0; }
+    footer { text-align: center; padding: 40px 16px; color: var(--ka-muted); font-size: 13px; }
+    .footer-note { max-width: 700px; margin: 0 auto; line-height: 1.6; }
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  .theme-btn{background:rgba(255,255,255,.16);border:none;border-radius:8px;padding:7px 10px;cursor:pointer;color:#fff;display:flex;align-items:center;transition:background .15s;flex-shrink:0}
+.theme-btn:hover{background:rgba(255,255,255,.28)}
+</style>
+</head>
+<body>
+  <header>
+    <h1>8th Grade Math</h1>
+    <p>Khan Academy style · 北师大版（北京师范大学版）</p>
+    <p class="subtitle">7 chapters · 5 practice + 3 quiz per chapter</p>
+  <button class="theme-btn" id="themeBtn" aria-label="Toggle day/night mode" title="Toggle day/night">
+    <svg id="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <svg id="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      <a class="card" href="math_chapter.html?ch=ch01&grade=8">
+        <div class="ch-num">01</div>
+        <div class="ch-meta">
+          <p class="ch-title">Pythagorean Theorem</p>
+          <p class="ch-cn">勾股定理</p>
+          <p class="ch-videos">1 video · 5 practice · 3 quiz</p>
+          <span class="badge ka">KA Full</span>
+        </div>
+      </a>
+
+      <a class="card" href="math_chapter.html?ch=ch02&grade=8">
+        <div class="ch-num">02</div>
+        <div class="ch-meta">
+          <p class="ch-title">Real Numbers</p>
+          <p class="ch-cn">实数</p>
+          <p class="ch-videos">1 video · 5 practice · 3 quiz</p>
+          <span class="badge ka">KA Full</span>
+        </div>
+      </a>
+
+      <a class="card" href="math_chapter.html?ch=ch03&grade=8">
+        <div class="ch-num">03</div>
+        <div class="ch-meta">
+          <p class="ch-title">Position & Coordinate Plane</p>
+          <p class="ch-cn">位置与坐标</p>
+          <p class="ch-videos">1 video · 5 practice · 3 quiz</p>
+          <span class="badge ka">KA Full</span>
+        </div>
+      </a>
+
+      <a class="card" href="math_chapter.html?ch=ch04&grade=8">
+        <div class="ch-num">04</div>
+        <div class="ch-meta">
+          <p class="ch-title">Linear Functions</p>
+          <p class="ch-cn">一次函数</p>
+          <p class="ch-videos">1 video · 5 practice · 3 quiz</p>
+          <span class="badge ka">KA Full</span>
+        </div>
+      </a>
+
+      <a class="card" href="math_chapter.html?ch=ch05&grade=8">
+        <div class="ch-num">05</div>
+        <div class="ch-meta">
+          <p class="ch-title">Systems of Linear Equations</p>
+          <p class="ch-cn">二元一次方程组</p>
+          <p class="ch-videos">1 video · 5 practice · 3 quiz</p>
+          <span class="badge ka">KA Full</span>
+        </div>
+      </a>
+
+      <a class="card" href="math_chapter.html?ch=ch06&grade=8">
+        <div class="ch-num">06</div>
+        <div class="ch-meta">
+          <p class="ch-title">Data Analysis</p>
+          <p class="ch-cn">数据的分析</p>
+          <p class="ch-videos">1 video · 5 practice · 3 quiz</p>
+          <span class="badge ka">KA Full</span>
+        </div>
+      </a>
+
+      <a class="card" href="math_chapter.html?ch=ch07&grade=8">
+        <div class="ch-num">07</div>
+        <div class="ch-meta">
+          <p class="ch-title">Foundations of Geometric Proof</p>
+          <p class="ch-cn">几何证明基础</p>
+          <p class="ch-videos">1 video · 5 practice · 3 quiz</p>
+          <span class="badge">Reorganized</span>
+        </div>
+      </a>
+    </div>
+
+    <footer>
+      <p class="footer-note">
+        <strong>课程说明：</strong>以北师大版8年级教材为索引，Ch07重组整合了8上第7章（证明）与8下第1章（三角形证明）核心内容，使几何证明工具链完整。<br>
+        All content in English with key terms annotated in Chinese.
+      </p>
+    </footer>
+  </div>
+<script>var _dark=true;function applyTheme(dark){_dark=dark;document.documentElement.dataset.theme=dark?'':'light';var sun=document.getElementById('icon-sun'),moon=document.getElementById('icon-moon');if(sun)sun.style.display=dark?'none':'block';if(moon)moon.style.display=dark?'block':'none';localStorage.setItem('mathTheme',dark?'dark':'light');}function toggleTheme(){applyTheme(!_dark);}document.addEventListener('DOMContentLoaded',function(){var saved=localStorage.getItem('mathTheme');applyTheme(saved!=='light');var btn=document.getElementById('themeBtn');if(btn)btn.addEventListener('click',toggleTheme);});</script>
+</body>
+</html>
